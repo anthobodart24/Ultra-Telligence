@@ -1,0 +1,21 @@
+/* style.css */
+:root {
+    --gold: #FFD700;
+    --dark-gold: #C5A100;
+    --black: #000000;
+    --dark-gray: #111111;
+    --light-gray: #EEEEEE;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--black);
+    color: var(--light-gray);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+/* Ajoute ici tes styles spécifiques */
