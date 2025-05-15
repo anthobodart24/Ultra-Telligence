@@ -7,75 +7,127 @@
     <meta name="keywords" content="Utra'Telligence, sagesse, spiritualité, éveil, connaissance, transformation">
     <meta name="author" content="Utra'Telligence">
     <title>Utra'Telligence - L'Éveil Ultime</title>
-    <!-- External CSS -->
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="assets/css/style.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
+    <link rel="preload" href="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" as="script">
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
 </head>
 <body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
     <!-- Hero Section -->
-    <header class="hero">
-        <div class="particles" id="particles-js"></div>
+    <header class="hero" role="banner">
+        <div class="particles" id="particles-js" aria-hidden="true"></div>
         <div class="header-content">
             <h1 data-aos="fade-down">UTRA'TELLIGENCE</h1>
             <p class="subtitle" data-aos="fade-up" data-aos-delay="200">L'Évolution Suprême de la Conscience</p>
+            
             <div class="logo-container" data-aos="zoom-in" data-aos-delay="400">
-                <div class="logo"></div>
+                <div class="logo" role="img" aria-label="Logo Utra'Telligence"></div>
             </div>
-            <a href="#initiation" class="btn-neon" data-aos="fade-up" data-aos-delay="600">
-                <span>Démarrer l'Initiation</span>
-            </a>
+            
+            <div class="cta-buttons">
+                <a href="#initiation" class="btn-neon" data-aos="fade-up" data-aos-delay="600">
+                    <span>Démarrer l'Initiation</span>
+                </a>
+                <button id="chatbot-trigger" class="btn-neon-outline" data-aos="fade-up" data-aos-delay="800">
+                    <span>Parler à Vercingétorix</span>
+                </button>
+            </div>
         </div>
     </header>
 
-    <!-- Story Section -->
-    <section class="story-section">
-        <div class="container">
-            <h2 data-aos="fade-right">L'ÉVEIL UTRA'TELLIGENT</h2>
-            <div class="story-content">
-                <p data-aos="fade-left" data-aos-delay="200">Utra'Telligence représente la convergence entre les savoirs ancestraux et les découvertes modernes.</p>
-                <p data-aos="fade-left" data-aos-delay="400">À travers les âges, les gardiens de la connaissance ont préservé ces enseignements. Aujourd'hui, Utra'Telligence les rend accessibles sous une forme adaptée à notre époque.</p>
+    <main id="main-content">
+        <!-- Story Section -->
+        <section class="story-section" aria-labelledby="story-heading">
+            <div class="container">
+                <h2 id="story-heading" data-aos="fade-right">L'ÉVEIL UTRA'TELLIGENT</h2>
+                <div class="story-content">
+                    <p data-aos="fade-left" data-aos-delay="200">Utra'Telligence représente la convergence entre les savoirs ancestraux et les découvertes modernes.</p>
+                    <p data-aos="fade-left" data-aos-delay="400">À travers les âges, les gardiens de la connaissance ont préservé ces enseignements. Aujourd'hui, Utra'Telligence les rend accessibles sous une forme adaptée à notre époque.</p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Chatbot Section -->
-    <section class="chatbot-section">
-        <div class="container">
-            <h2 data-aos="fade-down">GUIDANCE DE VERÇINGÉTORIX</h2>
-            <p data-aos="fade-up">Posez vos questions à Vercingétorix, le symbole de la résistance et de la liberté.</p>
-            <div class="chatbot-container">
-                <iframe 
-                    src="https://console.dialogflow.com/api-client/demo/embedded/YOUR_PROJECT_ID "
-                    title="Chatbot Vercingétorix - Guide Philosophique"
-                    class="chatbot-iframe">
-                </iframe>
+        <!-- Chatbot Section -->
+        <section class="chatbot-section" aria-labelledby="chatbot-heading">
+            <div class="container">
+                <h2 id="chatbot-heading" data-aos="fade-down">GUIDANCE DE VERÇINGÉTORIX</h2>
+                <p data-aos="fade-up">Posez vos questions à Vercingétorix, le symbole de la résistance et de la liberté.</p>
+                
+                <div class="chatbot-container">
+                    <iframe 
+                        src="https://console.dialogflow.com/api-client/demo/embedded/YOUR_PROJECT_ID"
+                        title="Chatbot Vercingétorix - Guide Philosophique"
+                        class="chatbot-iframe"
+                        loading="lazy"
+                        aria-label="Interface de dialogue avec Vercingétorix">
+                    </iframe>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- QR Code Section -->
-    <section class="cta-section" id="initiation">
-        <div class="container">
-            <h2 data-aos="fade-down">ACCÈS IMMÉDIAT</h2>
-            <p data-aos="fade-up">Scannez le code pour débloquer la connaissance interdite :</p>
-            <div class="qr-container">
-                <img src="assets/images/qr_code.webp" alt="QR Code d'accès Utra'Telligence" class="qr-code">
+        <!-- QR Code Section -->
+        <section class="cta-section" id="initiation" aria-labelledby="cta-heading">
+            <div class="container">
+                <h2 id="cta-heading" data-aos="fade-down">ACCÈS IMMÉDIAT</h2>
+                <p data-aos="fade-up">Scannez le code pour débloquer la connaissance interdite :</p>
+                
+                <div class="qr-container" data-aos="zoom-in">
+                    <img 
+                        src="assets/images/qr_code.webp" 
+                        alt="QR Code d'accès Utra'Telligence" 
+                        class="qr-code"
+                        width="200"
+                        height="200"
+                        loading="lazy">
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer style="background: linear-gradient(to top, #000, var(--dark-gray)); padding: 3rem 0;">
+    <footer class="footer" role="contentinfo">
         <div class="container footer-content">
-            <p data-aos="fade-in">&copy; 2023 Utra'Telligence. Tous droits réservés.</p>
-            <p data-aos="fade-in"><a href="#" class="legal-link">Politique de confidentialité</a> | <a href="#" class="legal-link">Conditions d'utilisation</a> | <a href="#" class="legal-link">Contact</a></p>
+            <p data-aos="fade-in">&copy; <span id="current-year">2023</span> Utra'Telligence. Tous droits réservés.</p>
+            <nav aria-label="Liens légaux">
+                <ul class="footer-links">
+                    <li><a href="#" class="legal-link">Politique de confidentialité</a></li>
+                    <li><a href="#" class="legal-link">Conditions d'utilisation</a></li>
+                    <li><a href="#" class="legal-link">Contact</a></li>
+                </ul>
+            </nav>
             <p class="motto" data-aos="fade-in">"Par la connaissance, nous transcendons"</p>
         </div>
     </footer>
 
-    <!-- Particles.js -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js "></script>
-    <script src="assets/js/script.js"></script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="assets/js/script.js" defer></script>
+    
+    <script>
+        // Update copyright year automatically
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Chatbot trigger functionality
+        document.getElementById('chatbot-trigger').addEventListener('click', function() {
+            const chatbotSection = document.querySelector('.chatbot-section');
+            chatbotSection.scrollIntoView({ behavior: 'smooth' });
+            
+            // Focus on chatbot iframe for accessibility
+            setTimeout(() => {
+                document.querySelector('.chatbot-iframe').focus();
+            }, 1000);
+        });
+    </script>
 </body>
 </html>
